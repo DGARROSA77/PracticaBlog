@@ -1,20 +1,26 @@
-<div>
-    <h1>BLOGS APP</h1>
-</div>
-
-<select (change)="onChange($event)">
-    <option value="todos">todos</option>
-    <option value="publico">publico</option>
-    <option value="privado">privado</option>
-</select>
-
-<div class="blogs">
-    <div class="blog" *ngFor="let post of posts">
-        <h2>{{post.Titulo}}</h2>
-        <h3>{{post.Texto}}</h3>
-        <p>{{post.autor}}</p>
-        <img [src]="post.imagen" alt="">
-        <p>{{post.fecha}}</p>
-        <h4>{{post.categoria}}</h4>
+<header>
+    <div>
+        <h1>BLOG APP</h1>
     </div>
-</div>
+</header>
+
+<body>
+    <div class="select">
+        <select (change)="onChange($event)">
+            <option value="todos">todos</option>
+            <option value="publico">público</option>
+            <option value="privado">privado</option>
+        </select>
+    </div>
+
+    <div class="blogs">
+        <div class="blog" *ngFor="let post of posts">
+            <h2>{{post.titulo}}</h2>
+            <p>{{post.texto}}</p>
+            <p>{{post.autor}}</p>
+            <img [src]="post.imagen" alt="">
+            <p>{{post.fecha}}</p>
+            <h4>{{post.categoria}}</h4>
+        </div>
+    </div>
+</body>
