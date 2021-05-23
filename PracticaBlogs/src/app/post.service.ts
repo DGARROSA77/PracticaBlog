@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import * as EventEmitter from 'events';
 import { Post } from './post.interface';
 
 @Injectable({
@@ -6,26 +7,26 @@ import { Post } from './post.interface';
 })
 export class PostService {
 
-  arrPost: Post[]
+  private arrPost: Post[]
 
   constructor() {
     this.arrPost = [
-      // {
-      //   titulo: 'CASA',
-      //   texto: 'Hola Mundo',
-      //   autor: 'David Garrosa',
-      //   imagen: 'http://planodecasa.com/wp-content/uploads/2016/10/Casa-de-2-pisos-parcialmente-revestida-en-piedra.jpg',
-      //   fecha: '20/05/2005',
-      //   categoria: 'privado'
-      // },
-      // {
-      //   titulo: 'CASA',
-      //   texto: 'Hola Mundo',
-      //   autor: 'David Garrosa',
-      //   imagen: 'http://planodecasa.com/wp-content/uploads/2016/10/Casa-de-2-pisos-parcialmente-revestida-en-piedra.jpg',
-      //   fecha: '4/05/2017',
-      //   categoria: 'publico'
-      // }
+      {
+        titulo: 'CASA',
+        texto: 'Hola Mundo',
+        autor: 'David Garrosa',
+        imagen: 'http://planodecasa.com/wp-content/uploads/2016/10/Casa-de-2-pisos-parcialmente-revestida-en-piedra.jpg',
+        fecha: '20/05/2005',
+        categoria: 'privado'
+      },
+      {
+        titulo: 'CASA',
+        texto: 'Hola Mundo',
+        autor: 'David Garrosa',
+        imagen: 'http://planodecasa.com/wp-content/uploads/2016/10/Casa-de-2-pisos-parcialmente-revestida-en-piedra.jpg',
+        fecha: '4/05/2017',
+        categoria: 'publico'
+      }
 
     ]
   }
@@ -34,9 +35,8 @@ export class PostService {
     return this.arrPost;
   }
 
-  addPost($event) {
-    this.arrPost.push($event);
-    console.log(this.arrPost.push());
+  addPost(nuevoPost: Post) {
+    this.arrPost.push(nuevoPost);
 
   }
 
@@ -46,10 +46,6 @@ export class PostService {
     })
   }
 
-  onPostCreado($event) {
-    console.log(this.arrPost);
-
-  }
 
 }
 
