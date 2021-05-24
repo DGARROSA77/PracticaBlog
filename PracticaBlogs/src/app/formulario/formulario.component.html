@@ -1,34 +1,51 @@
-<form [formGroup]="formGroup" (ngSubmit)="submit(formGroup.value)">
-    <div class="form-group">
-        <label>Titulo</label>
-        <input type="text" formControlName="titulo" class="form-control">
+<header>
+    <nav>
+        <a href="/blog">BLOG</a>
+    </nav>
+    <nav>
+        <a href="/new">NEW</a>
+    </nav>
+</header>
 
-    </div>
-    <div class="form-group">
-        <label>Texto</label>
-        <input type="text" formControlName="texto" class="form-control">
-    </div>
+<body>
 
-    <div class="form-group">
-        <label>Autor</label>
-        <input type="text" formControlName="autor" class="form-control">
-    </div>
+    <form action="#" target="" method="get" name="formDatosPersonales" [formGroup]="formGroup"
+        (ngSubmit)="submit(formGroup.value)">
+        <div class="form-group">
+            <label>Titulo</label>
+            <input type="text" formControlName="titulo" class="form-control" placeholder="Titulo">
 
-    <div class="form-group">
-        <label>Imagen</label>
-        <input type="text" formControlName="imagen" class="form-control">
-    </div>
+        </div>
+        <div class="form-group">
+            <label>Texto</label>
+            <input type="text" formControlName="texto" class="form-control" placeholder="Añade texto">
+        </div>
 
-    <div class="form-group">
-        <label>Fecha</label>
-        <input type="text" formControlName="fecha" class="form-control">
-    </div>
+        <div class="form-group">
+            <label>Autor</label>
+            <input type="text" formControlName="autor" class="form-control" placeholder="Escribe tu nombre">
+        </div>
 
-    <div class="form-group">
-        <label>Categoria</label>
-        <input type="text" formControlName="categoria" class="form-control">
-    </div>
+        <div class="form-group">
+            <label>Imagen</label>
+            <input type="text" formControlName="imagen" class="form-control" placeholder="Inserta enlace Imagen">
+        </div>
 
-    <button class="btn btn-block btn-info" (click)="submit(formGroup.value)">Enviar</button>
+        <div class="form-group">
+            <label>Fecha</label>
+            <input type="text" formControlName="fecha" class="form-control" placeholder="fecha Blog">
+        </div>
 
-</form>
+        <div class="form-group">
+            <label>Categoria</label>
+            <input type="text" formControlName="categoria" class="form-control"
+                placeholder=" animacion/musical/terror..">
+        </div>
+
+        <button class="btn btn-block btn-info" (click)="submit(formGroup.value)">Añadir Blog</button>
+
+    </form>
+
+
+
+</body>

@@ -1,27 +1,31 @@
 
 *{
-    width: 0 auto;
-    height: 0 auto;
+    margin: 0 ;
+    padding: 0 ;
     box-sizing: border-box;
+    
+}
+
+header{
+    justify-content: space-around;
+    
 }
 
 img{
     width: 100%;
+  
+    background-size: cover;
+    background-position:center;
+    transition: .2s;
+  
 }
 
-header{
-    justify-content: center;
+body{
+    font-family: sans-serif;
 }
 
-h1{
-   color: brown;
-}
 
-/* body{
-    /* background: rgb(34,193,195);
-    background: linear-gradient(135deg, rgba(34,193,195,1) 23%, rgba(253,247,45,1) 100%);  
 
-  } */
 
 body select{
     height: 30px;
@@ -31,12 +35,25 @@ body select{
 
 .blogs{
     display: flex;
-    width:300px;
-    height: 100px;
-    
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 15px;
+    justify-items: center;
+    border: 2px solid black;
+    border-radius: 10px;
 }
 
 .blog{
-    margin:10px;
-   
+   display: grid;
+   grid-gap: 20px;
+   max-width: 1000px;
+   margin: auto;
+    margin: 5px;
+    margin-left: 20px;
+    
+  
 }
+
+
+
